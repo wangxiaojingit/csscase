@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <style >
+    *{margin:0;padding:0;}
+    ul,ol{
+         list-style: none;
+    }
+    #mainBox{
+       width:500px;
+       margin:0 auto;
+    } 
+    #mainBox ul li{
+        height:50px;
+        overflow:hidden;
+        transition: all .5s;
+        
+    } 
+
+    #mainBox ul li h3{
+        height:50px;
+        line-height:50px;
+    background:linear-gradient(#b6d6e6,#57a1ce,#3a91c4,#70afd4);
+        position:relative;
+        text-indent:10px;
+        color:gold;
+    } 
+    #mainBox ul li:hover{
+        height:150px;
+    } 
+    #mainBox ul li:hover h3{
+        background:linear-gradient(#99e1b3,#57cd81);
+        transition: all .5s;
+    }
+    #mainBox ul li:hover h3:after{
+        transform: rotate(90deg)
+    }
+    #mainBox ul li h3:after{
+        content:"";
+        display:block;
+        width:0;
+        position:absolute;
+        right:10px;
+        top:15px;
+        border:10px solid gold;
+        border-color: transparent transparent transparent gold;
+    }
+    #mainBox ul li div{
+        min-height:100px;
+        text-align:center;
+        background:linear-gradient(#e1eaee,#99c4fc);
+
+
+    }
+    </style>
+</head>
+<body>
+ <div id="mainBox">
+   <ul>
+       <li>
+           <h3>标题1</h3>
+           <div>content1</div>
+       </li>
+       <li>
+            <h3>标题2</h3>
+            <div>content2</div>
+            <h3>标题3</h3>
+            <div>content3</div>
+       </li>
+       <li>
+        <h3>标题3</h3>
+        <div>content3</div>
+        <h3>标题4</h3>
+        <div>content4</div>
+       </li>
+       <li>
+        <h3>标题5</h3>
+        <div>content5</div>
+        <h3>标题6</h3>
+        <div>content6</div>
+       </li>
+
+   </ul>
+ </div>
+</body>
+</html>
