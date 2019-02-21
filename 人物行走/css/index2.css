@@ -1,0 +1,355 @@
+*{
+    margin:0;padding:0;
+} 
+/* 整个画布 */
+.canvas{
+  width:760px;
+  height:600px;
+  border:1px solid #2e2e2e;
+  margin:0 auto;
+  position:relative;
+}
+/* me */
+.canvas div{
+    position: absolute;
+}
+.me{
+    top:50px;
+    left:350px;
+} 
+.torso{
+    width: 86px;
+    height: 275px;
+    background-image: url("../images/torso.png");
+} 
+
+.left.leg{
+    top:225px;
+    left:6px;
+    z-index:-1;
+}
+.left.thigh{
+    width: 70px;
+    height: 145px;
+    background-image:url("../images/left-thigh.png");
+} 
+.shin{
+    top: 115px;
+    width: 50px;
+    height: 170px;
+    background-image: url("../images/shin.png");
+    z-index:-1;
+} 
+.foot{
+    top: 155px;
+    left: 2px;
+    width: 67px;
+    height: 34px;
+    background-image:url("../images/foot.png");
+} 
+.toes{
+    top: 9px;
+    left: 66px;
+    width: 28px;
+    height: 25px;
+    background-image:url("../images/toes.png");
+} 
+
+/* 右腿 */
+.leg{
+  left:6px;
+}
+.right.leg{
+  top:235px;
+  z-index:-1;
+} 
+
+.right.thigh{
+    width: 70px;
+    height: 145px;
+    background-image:url("../images/right-thigh.png");
+} 
+/* 左胳膊 */
+.bicep{
+    height: 124px;
+    width: 51px;
+    background-image:url("../images/left-bicep.png");
+    
+} 
+.left.bicep{
+   z-index:-2;
+}
+.left.arm{
+    top:87px;
+    left:12px;
+} 
+.right.arm{
+    top:93px;
+    left:12px;
+} 
+.right.bicep{
+    background-image:url("../images/right-bicep.png");
+}
+.forearm{
+    top: 108px;
+    left: 14px;
+    width: 36px;
+    height: 121px;
+    background-image: url("../images/left-forearm.png");
+} 
+.right.forearm{
+    background-image: url("../images/right-forearm.png");
+}
+/* 左大臂 */
+.bicep{
+  transform-origin:20px 10px;
+}
+.left.bicep{
+    animation: left-bicep 1750ms linear infinite;
+    
+}
+.right.bicep{
+    animation: right-bicep 1750ms linear infinite;
+}
+.left.forearm{
+    animation: left-forearm 1750ms linear infinite;
+    transform-origin:3px 7px;
+} 
+.right.forearm{
+    animation: right-forearm 1750ms linear infinite;
+    transform-origin:3px 7px;
+} 
+
+
+
+/* 左大腿 */
+.left.leg{
+    animation: left-thigh 1750ms linear infinite;
+    transform-origin:30px 20px;
+}
+.right.leg{
+    animation: right-thigh 1750ms linear infinite;
+    transform-origin:30px 20px;
+}
+.left.shin{
+  animation:left-shin  1750ms linear infinite;
+  transform-origin: 30px 20px;
+} 
+.right.shin{
+    animation:right-shin  1750ms linear infinite;
+    transform-origin: 30px 25px;
+  } 
+.left.foot{
+    animation:left-foot 1750ms linear infinite;
+    transform-origin:0 50%;
+} 
+.left.foot{
+    animation:right-foot 1750ms linear infinite;
+    transform-origin:0 50%;
+} 
+.left.toes{
+    animation:left-toes 1750ms linear infinite;
+    transform-origin:0 100%;
+}
+.right.toes{
+    animation:right-toes 1750ms linear infinite;
+    transform-origin:0 100%;
+}
+/* 脚印 */
+.shadow{
+    width: 200px;
+    height: 70px;
+    left: 270px;
+    bottom: 5px;
+    background-image: url(../images/shadow.png);
+    animation: shadow 1.5s linear infinite;
+}
+/* 左大臂运动动画 */
+@keyframes left-bicep {
+    0% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(26deg);
+    }
+    100% {
+        transform: rotate(-20deg);
+    }
+} 
+/* 右大臂运动 */
+@keyframes right-bicep {
+    0% {
+        transform: rotate(26deg);
+    }
+    50% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(26deg);
+    }
+} 
+/* 左小臂运动动画 */
+@keyframes left-forearm{
+    0% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(-45deg);
+    }
+} 
+@keyframes right-forearm{
+    0% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+} 
+
+/* 左大腿运动动画 */
+@keyframes left-thigh{
+    0%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform:rotate(-45deg);
+    }
+    100%{
+        transform:rotate(10deg);
+    }
+} 
+/* 右大腿运动动画 */
+@keyframes right-thigh{
+    0%{
+        transform: rotate(-45deg);
+    }
+    50%{
+        transform:rotate(10deg);
+    }
+    100%{
+        transform:rotate(-45deg);
+    }
+} 
+
+/* 左小腿 */
+@keyframes left-shin{
+    0%{
+        transform:rotate(20deg);
+    }
+    50%{
+        transform:rotate(85deg);
+    }
+    100%{
+        transform:rotate(30deg)
+    }
+}
+/* 右小腿 */
+@keyframes right-shin{
+    0%{
+        transform:rotate(30deg);
+    }
+    50%{
+        transform:rotate(20deg);
+    }
+    100%{
+        transform:rotate(20deg)
+    }
+}
+/* 左脚 */
+@keyframes left-foot{
+    0% {
+        transform: rotate(-16deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(-7deg);
+    }
+    100% {
+        transform: rotate(-16deg);
+    }
+} 
+/* 右脚 */
+@keyframes right-foot{
+0% {
+    transform: rotate(-5deg);
+}
+25% {
+    transform: rotate(-7deg);
+}
+50% {
+    transform: rotate(-16deg);
+}
+75% {
+    transform: rotate(-10deg);
+}
+100% {
+    transform: rotate(-5deg);
+}
+}
+/* 左脚尖 */
+@keyframes left-toes{
+    0% {
+        transform: rotate(-10deg);
+    }
+    25% {
+        transform: rotate(-25deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+/* 右脚尖 */
+@keyframes right-toes{
+0% {
+    transform: rotate(0deg);
+}
+25% {
+    transform: rotate(-10deg);
+}
+50% {
+    transform: rotate(-10deg);
+}
+75% {
+    transform: rotate(-25deg);
+}
+100% {
+    transform: rotate(0deg);
+}
+}   
+
+/*脚阴影  */
+@-webkit-keyframes shadow{
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    } 
+}

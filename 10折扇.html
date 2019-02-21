@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width : 600px;
+				height : 230px;
+				margin: 100px auto;
+				position: relative;
+				border-bottom: 2px solid #000;
+				 
+			}
+			.box p{
+				width: 60px;
+				height: 200px;
+				position: absolute;
+				left: 40%;
+				bottom : 30px;
+				transform-origin : center bottom;
+				transition: 1s;
+			}
+			.box p:nth-child(1){
+				background: red;
+			}
+			
+			.box:hover p:nth-child(2){
+				transform: rotate(15deg);
+				background: pink;
+			}
+			.box:hover p:nth-child(3){
+				transform: rotate(30deg);
+				background: green;
+			}
+			.box:hover p:nth-child(4){
+				transform: rotate(45deg);
+				background: yellow;
+			}
+			.box:hover p:nth-child(5){
+				transform: rotate(60deg);
+				background: black;
+			}
+			.box:hover p:nth-child(6){
+				transform: rotate(75deg);
+				background: orange;
+			}
+			.box:hover p:nth-child(7){
+				transform: rotate(90deg);
+				background: lightskyblue;
+			}
+			
+			.box:hover p:nth-last-child(2){
+				transform: rotate(-15deg);
+				background: pink;
+			}
+			.box:hover p:nth-last-child(3){
+				transform: rotate(-30deg);
+				background: green;
+			}
+			.box:hover p:nth-last-child(4){
+				transform: rotate(-45deg);
+					background: yellow;
+			}
+			.box:hover p:nth-last-child(5){
+				transform: rotate(-60deg);
+				background: black;
+			}
+			.box:hover p:nth-last-child(6){
+				transform: rotate(-75deg);
+				background: orange;
+			}
+			.box:hover p:nth-last-child(7){
+				transform: rotate(-90deg);
+				background: lightskyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<p>1</p>
+			<p>2</p>
+			<p>3</p>
+			<p>4</p>
+			<p>5</p>
+			<p>6</p>
+			<p>7</p>
+			<p>7</p>
+			<p>6</p>
+			<p>5</p>
+			<p>4</p>
+			<p>3</p>
+			<p>2</p>
+			<p>1</p>
+		</div>
+	</body>
+</html>

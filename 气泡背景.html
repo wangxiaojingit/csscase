@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>气泡背景</title>
+    <style>
+        body,html{height:100%;}
+        *{margin:0;padding:0;}
+        body{
+            background: linear-gradient(to bottom right, #50A3A2, #53E3A6);
+        } 
+        ul,ol,li{
+            list-style: none;
+        }
+        #bubble{
+            position:relative;
+            height:100%;
+            overflow:hidden;
+            position:relative;
+            /* background:#1bc5a9; */
+        } 
+        #bubble li{
+            width:40px;
+            height:40px;
+            border-radius:50%;
+            position:absolute;
+            left:0;
+            bottom:-200px;
+            background-color: rgba(255, 255, 255,.1);
+            animation: run 5s linear infinite;
+
+        } 
+        #bubble li:nth-child(1){
+            left:5%;
+            
+        } 
+        #bubble li:nth-child(2){
+            left:15%;
+            width:50px;
+            height:50px;
+            animation-delay: 2s;
+        animation-duration: 7s;
+
+        }
+        #bubble li:nth-child(3){
+            left:30%;
+            width:80px;
+            height:80px;
+            animation-delay: 4s;
+        } 
+        #bubble li:nth-child(4){
+            left:40%;
+            width:100px;
+            height:100px;
+            animation-duration: 8s;
+        }
+        #bubble li:nth-child(5){
+            left:50%;
+            width:120px;
+            height:120px;
+            animation-delay: 3s;
+        background-color: rgba(255, 255, 255, 0.2);
+        }
+        #bubble li:nth-child(6){
+            left:60%;
+            width:100px;
+            height:100px;
+            animation-delay: 2s;
+        }
+        #bubble li:nth-child(7){
+            left:70%;
+            width:180px;
+            height:180px;
+            animation-delay: 4s;
+            animation-duration: 15s;
+        }
+        #bubble li:nth-child(8){
+            left:80%;
+            width:140px;
+            height:140px;
+            animation-delay: 2s;
+        animation-duration: 12s;
+        background-color: rgba(255, 255, 255, 0.3);
+        }
+        #bubble li:nth-child(9){
+            left:90%;
+            width:160px;
+            height:160px;
+            animation-delay: 5s;
+        }
+        #bubble li:nth-child(10){
+            left:25%;
+            width:200px;
+            height:200px;
+        }
+        @keyframes run {
+            0%{
+                opacity:0.5;
+                transform:translateY(0px) rotate(45deg);
+            }
+            25%{
+                opacity:0.75;
+                transform: translateY(-400px) rotate(90deg);
+            }
+            50%{
+                opacity:1;
+                transform:translateY(-600px) rotate(135deg);
+            }
+            100%{
+                opacity:0;
+                transform: translate(-1000px) rotate(180deg)
+            }
+        }
+    </style>
+</head>
+<body>
+   <ul id="bubble">
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+   </ul>
+</body>
+</html>

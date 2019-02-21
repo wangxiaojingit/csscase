@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>气泡背景图</title>
+    <style>
+    *{margin:0;padding:0;}
+    html,body,.wraper{
+        height:100%;
+    }
+    ul,ol,li{list-style:none;}
+    body{
+        background:linear-gradient(to right bottom,#50A3A2,#53E3A6);
+    }
+    .wraper{
+        position:relative;
+    }
+    .wraper>li{
+        position: absolute;
+        left:0;
+        bottom:-300px;
+        width:60px;
+        height:60px;
+        border-radius:50%;
+        background:rgba(255,255,255,.3);
+        animation: bubble 5s linear infinite;
+    }  
+    .wraper>li:nth-child(2){
+      width:80px;
+      height:80px;
+      left:5%;
+      animation-delay:2s;
+    }
+    .wraper>li:nth-child(3){
+      width:130px;
+      height:130px;
+      left:10%;
+      animation-delay:3s;
+    }
+    .wraper>li:nth-child(4){
+      width:100px;
+      height:100px;
+      left:15%;
+      animation-delay:4s;
+    }
+    .wraper>li:nth-child(5){
+      width:150px;
+      height:150px;
+      left:35%;
+      animation-delay:2s;
+    }
+    .wraper>li:nth-child(6){
+      width:120px;
+      height:120px;
+      left:25%;
+      animation-delay:5s;
+    }
+    .wraper>li:nth-child(7){
+      width:80px;
+      height:80px;
+      left:55%;
+      animation-delay:4s;
+    }
+    .wraper>li:nth-child(8){
+      width:200px;
+      height:200px;
+      left:75%;
+      animation-delay:3s;
+    }
+    .wraper>li:nth-child(9){
+      width:130px;
+      height:130px;
+      left:85%;
+      animation-delay:5s;
+    }
+    .wraper>li:nth-child(10){
+      width:150px;
+      height:150px;
+      left:95%;
+      animation-delay:6s;
+    } 
+
+    @-webkit-keyframes bubble{
+        0%{
+            opacity:0.3;
+            transform: translateY(0)
+        }
+        25%{
+           opacity:0.5;
+           transform: translateY(-600px);
+        }
+        50%{
+            opacity:1;
+            transform: translateY(-800px);
+        }
+        100%{
+            opacity:0;
+            transform: translate(-1200px)
+        }
+    }
+    </style>
+</head>
+<body>
+    <ul class="wraper">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
