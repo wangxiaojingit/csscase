@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;padding:0;
+    }
+    body{
+        background:#000;
+    }
+    .container{
+        perspective:1500px;
+    }
+    .images{
+        width:200px;
+        height:200px;
+        margin:150px auto;
+        position:relative;
+        transform:rotateX(-20deg);
+        transform-style: preserve-3d;/*切换 3D 效果*/
+    }
+    .images img{
+        width:200px;
+        height:200px;
+        position:absolute;
+        box-shadow:0 0 8px #eee;
+
+    }
+    .bottom{
+    width:1200px;
+    height:1200px;
+    border-radius:50%;
+    position:absolute;
+    background:green;
+    left:0;
+    bottom:0;
+    left:50%;
+    margin-left:-600px;
+    top:100%;
+    margin-top:-600px;
+    
+    transform:rotateX(90deg);
+    background:-webkit-radial-gradient(center center,600px 600px,rgba(158,158,222,0.5),rgba(0,0,0,0)); 
+
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="images" id="wrap">
+            <img src="images/1.jpg" alt="">
+            <img src="images/liuchutian1.jpg" alt="">
+            <img src="images/liuchutian2.jpeg" alt="">
+            <img src="images/liuchutian3.jpg" alt="">
+            <img src="images/liuchutian4.jpg" alt="">
+            <img src="images/5.jpg" alt="">
+            <img src="images/6.jpg" alt="">
+            <!-- <img src="images/7.jpg" alt="">
+            <img src="images/8.jpg" alt="">
+            <img src="images/9.jpg" alt="">
+            <img src="images/10.jpg" alt=""> -->
+            <div class="bottom"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    window.onload=function(){
+        var wrap=document.getElementById("wrap");
+        var images=document.getElementsByTagName("img");
+        var deg=360/images.length;
+        for(var i=0;i<images.length;i++){
+            images[i].style.transform="rotateY("+deg*i+"deg) translateZ(260px)";
+            // 照片堆叠后，最上面的照片就是最后一张，我们先让最后一张先运动
+            // 1s 的时候，是总过渡的时间，后面的0.2*i 就是延迟的时间
+            images[images.length - i - 1].style.transition = "1s " + 0.2 * i + "s";
+        }
+        var x=0;
+        setInterval(function(){
+            x++;
+            var y=x*0.2;
+            wrap.style.transform="rotateX(-10deg) rotateY("+y+"deg)";
+        },30)
+            
+        
+   
+    }
+</script>
