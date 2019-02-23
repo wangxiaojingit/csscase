@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{margin:0;padding:0;}
+    html,body{
+        height:100%;
+    }
+    ul,li,ol{
+      list-style: none;
+    }
+    body{
+        background:linear-gradient(to right bottom,#50A3A2,#53E3A6);
+    }
+    #wrapper{
+        height:100%;
+        position: relative;
+    } 
+    #wrapper li{
+        width:60px;
+        height:60px;
+        position:absolute;
+        left:0;
+        bottom:-300px;
+        background:rgba(255,255,255,.3);
+        border-radius:50%;
+        animation: run 5s linear infinite;
+    }
+    #wrapper li:nth-child(2){
+          left:5%;
+          width:80px;
+          height:80px;
+          animation-delay: 2s;
+          animation-duration: 7s;
+    }
+    #wrapper li:nth-child(3){
+          left:10%;
+          height:150px;
+          width:150px;
+          animation-delay: 3s;
+          animation-duration: 6s;
+    }
+    #wrapper li:nth-child(4){
+          left:12%;
+          width:100px;
+          height:100px;
+          animation-delay: 5s;
+          animation-duration: 8s;
+    }
+    #wrapper li:nth-child(5){
+          left:22%;
+          width:200px;
+          height:200px;
+          animation-delay: 2s;
+          animation-duration: 6s;
+    }
+    #wrapper li:nth-child(6){
+          left:32%;
+          width:70px;
+          height:70px;
+          animation-delay: 4s;
+          animation-duration: 7s;
+    }
+    #wrapper li:nth-child(7){
+          left:42%;
+          width:200px;
+          height:200px;
+          animation-delay: 6s;
+          animation-duration: 5s;
+    }
+    #wrapper li:nth-child(8){
+          left:52%;
+          width:160px;
+          height:160px;
+          animation-delay: 7s;
+          animation-duration: 7s;
+    }
+    #wrapper li:nth-child(9){
+          left:62%;
+          width:60px;
+          height:60px;
+          animation-delay: 8s;
+          animation-duration: 8s;
+    }
+    #wrapper li:nth-child(10){
+          left:82%;
+          width:160px;
+          height:160px;
+          animation-delay: 2s;
+          animation-duration: 7s;
+    } 
+
+    @-webkit-keyframes run{
+        0%{
+            opacity:0;
+            transform:translateY(0);
+        }
+        25%{
+            opacity:0.3;
+            transform: translateY(-300px);
+        }
+        70%{
+            opacity:1;
+            transform:translateY(-800px);
+        }
+        100%{
+            opacity:0;
+            transform:translate(-1000px);
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <ul id="wrapper">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
